@@ -1,0 +1,24 @@
+Rolling validation forecasts for 2024 (refit every quarter) ...
+Test forecasts (train 2023-2024, predict 2025) ...
+Optimizing daily orders for 2025 ...
+
+=== 2025 test year: forecast accuracy vs. decision cost ===
+                            forecast_MAE  annual_cost_eur  cost_flu_season_jan_mar  cost_rest_of_year  fill_rate  days_cabinet_full  share_orders_covering_demand  saving_vs_gbm_point
+method                                                                                                                                                                                
+Naive (last week)                  9.196      104,734.196               29,025.796         75,708.400      0.804                  4                         0.523               -0.228
+Linear regression                  6.650       71,396.195               18,478.876         52,917.320      0.867                  0                         0.561                0.163
+Gradient boosting                  7.275       85,276.988               22,593.615         62,683.373      0.838                  0                         0.513                0.000
+Quantile gradient boosting         9.906       37,653.281               11,376.477         26,276.805      0.951                 27                         0.816                0.558
+Stochastic LP (SAA)                  NaN       36,314.211               11,470.586         24,843.625      0.969                236                         0.897                0.574
+Perfect foresight                    NaN          128.000                  128.000              0.000      0.999                  4                         0.999                0.998
+
+=== Per medicine ===
+                MAE_gbm  critical_ratio  mean_demand
+Antibiotic IV      7.75            0.92        24.02
+Antiviral oral     3.25            0.90         7.81
+Paracetamol IV     9.49            0.89        33.12
+Insulin            4.76            0.94        12.75
+Heparin            5.31            0.94        15.31
+Saline 500 ml     13.09            0.91        47.75
+
+Results written to /home/claude/predict-then-optimize/results
