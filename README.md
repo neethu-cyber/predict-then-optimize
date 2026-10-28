@@ -1,5 +1,16 @@
 # Predict-then-Optimize – Hospital Medicine Ordering under Uncertainty
 
+## Why I built this
+
+My background is in machine learning, and I always measured forecasts by their
+error. I wanted to test whether the most accurate forecast also leads to the best
+decision, using hospital medicine orders as an example.
+
+The answer was no. The model with the lowest error led to many shortages, because
+running out of a medicine is much more expensive than having a few packs left over.
+This project changed how I think about forecasting: the goal is a good decision,
+not only a small error.
+
 Does the most accurate demand forecast lead to the best ordering decisions? This project shows that it does not.
 
 A hospital pharmacy restocks a ward cabinet with 6 medicines every evening for the next day. Machine learning
